@@ -1,0 +1,33 @@
+{
+  "name": "maket",
+  "version": "1.0.0",
+  "description": "Fifth layout for OxIT ",
+  "main": "gulp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImmortalAmxx/Fifth-layout.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "scss",
+    "bootstap",
+    "web"
+  ],
+  "author": "Immortal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImmortalAmxx/Fifth-layout/issues"
+  },
+  "homepage": "https://github.com/ImmortalAmxx/Fifth-layout#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  },
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}
