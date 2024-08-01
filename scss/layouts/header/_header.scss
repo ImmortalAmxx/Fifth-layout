@@ -1,0 +1,52 @@
+#header {
+  background: url(/img/bg-header.png) no-repeat center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+#header .header-content {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .header-content .nav-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .header-content .nav-menu .company-name {
+  display: flex;
+  width: 100px;
+}
+
+#header .header-content .nav-menu .company-name h2 {
+  color: white;
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+#header .header-content .nav-menu .company-name small {
+  color: #525255;
+  font-size: 9px;
+}
+
+#header .header-content .nav-menu .nav-item .menu-list {
+  list-style-type: none;
+  display: flex;
+  font-size: 16px;
+}
+
+#header .header-content .nav-menu .nav-item .menu-link {
+  padding: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
+}
