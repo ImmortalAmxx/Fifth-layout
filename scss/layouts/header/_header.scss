@@ -1,52 +1,85 @@
+/* Header styles */
 #header {
   background: url(/img/bg-header.png) no-repeat center top;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 15px;
+  @include flex(column, center);
 }
 
 #header .header-content {
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex($align-items: center, $justify-content: space-between);
+
 }
 
 #header .header-content .nav-menu {
+  @include flex($align-items: center, $justify-content: space-between);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 #header .header-content .nav-menu .company-name {
-  display: flex;
+  @include flex($align-items: center);
   width: 100px;
 }
 
 #header .header-content .nav-menu .company-name h2 {
-  color: white;
+  color: $white-color;
   font-size: 24px;
-  padding-right: 10px;
+  padding-right: 5px;
+  margin: 0;
 }
 
 #header .header-content .nav-menu .company-name small {
-  color: #525255;
+  color: $charcoal-gray-color;
   font-size: 9px;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+#header .header-content .nav-menu .nav-item {
+  @include flex($align-items: center);
 }
 
 #header .header-content .nav-menu .nav-item .menu-list {
   list-style-type: none;
   display: flex;
   font-size: 16px;
+  padding: 0;
+  margin: 0;
 }
 
-#header .header-content .nav-menu .nav-item .menu-link {
+#header .header-content .nav-menu .nav-item .menu-list .menu-link {
+  position: relative;
   padding: 0 10px;
   text-decoration: none;
-  color: white;
+  color: $white-color;
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
+}
+
+#header .header-content .nav-menu .nav-item .menu-list .menu-link::before,
+#header .header-content .nav-menu .nav-item .menu-list .menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background-color: #00BFFF;
+  transition: width 0.3s ease;
+}
+
+#header .header-content .nav-menu .nav-item .menu-list .menu-link::before {
+  left: 10px;
+}
+
+#header .header-content .nav-menu .nav-item .menu-list .menu-link::after {
+  right: 10px;
+}
+
+#header .header-content .nav-menu .nav-item .menu-list .menu-link:hover::before,
+#header .header-content .nav-menu .nav-item .menu-list .menu-link:hover::after,
+#header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::before,
+#header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::after {
+  width: calc(50% - 12px);
 }
