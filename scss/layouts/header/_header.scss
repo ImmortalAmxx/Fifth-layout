@@ -1,7 +1,5 @@
 /* Header styles */
 #header {
-  background: url(/img/bg-header.png) no-repeat center top;
-  background-size: cover;
   padding: 15px;
   @include flex(column, center);
 }

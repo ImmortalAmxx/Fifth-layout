@@ -12,6 +12,8 @@
 }
 
 body {
+  background: url(/img/bg-header.png) no-repeat center top;
+  background-size: cover;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,8 +26,6 @@ body {
 
 /* Header styles */
 #header {
-  background: url(/img/bg-header.png) no-repeat center top;
-  background-size: cover;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -113,4 +113,50 @@ body {
 #header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::before,
 #header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::after {
   width: calc(50% - 12px);
+}
+
+/* Baner */
+main .container .baner .introducing {
+  width: 470px;
+  margin-top: 100px;
+}
+
+main .container .baner .introducing small {
+  color: #008ed6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+main .container .baner .introducing h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+main .container .baner .introducing p {
+  color: #999999;
+}
+
+main .container .baner .buttons {
+  margin-top: 60px;
+  display: flex;
+}
+
+main .container .baner .buttons button {
+  margin-right: 15px;
+}
+
+main .container .baner .buttons .btn.btn-primary {
+  background-color: #008ed6;
+  font-size: 14px;
+}
+
+main .container .baner .buttons .btn-outline-dark {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+main .container .baner .buttons .btn.btn-primary,
+main .container .baner .buttons .btn-outline-dark {
+  padding: 1rem 2.3rem;
 }
