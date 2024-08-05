@@ -1,0 +1,46 @@
+/* Banner */
+.first-block .container .banner .introducing {
+  width: 480px;
+  margin-top: 100px;
+}
+
+.first-block .container .banner .introducing small {
+  color: $light-blue-color;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.first-block .container .banner .introducing h2 {
+  color: $white-color;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.first-block .container .banner .introducing p {
+  color: $light-gray-color;
+  font-size: 18px;
+}
+
+.first-block .container .banner .buttons {
+  margin-top: 60px;
+  display: flex;
+}
+
+.first-block .container .banner .buttons button {
+  margin-right: 15px;
+}
+
+.first-block .container .banner .buttons .btn.btn-primary {
+  background-color: $light-blue-color;
+  font-size: 14px;
+}
+
+.first-block .container .banner .buttons .btn-outline-dark {
+  color: $white-color;
+  font-size: 14px;
+}
+
+.first-block .container .banner .buttons .btn.btn-primary, 
+.first-block .container .banner .buttons .btn-outline-dark {
+  padding: 1.0rem 2.3rem;
+}

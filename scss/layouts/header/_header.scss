@@ -1,10 +1,11 @@
 /* Header styles */
-#header {
-  padding: 15px;
-  @include flex(column, center);
+.first-block .wrapper-content #header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
 }
 
-#header .header-content {
+.first-block .wrapper-content #header .header-content {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -12,35 +13,35 @@
 
 }
 
-#header .header-content .nav-menu {
+.first-block .wrapper-content #header .header-content .container .nav-menu {
   @include flex($align-items: center, $justify-content: space-between);
   width: 100%;
 }
 
-#header .header-content .nav-menu .company-name {
+.first-block .wrapper-content #header .header-content .container .nav-menu .company-name {
   @include flex($align-items: center);
   width: 100px;
 }
 
-#header .header-content .nav-menu .company-name h2 {
+.first-block .wrapper-content #header .header-content .container .nav-menu .company-name h2 {
   color: $white-color;
   font-size: 24px;
   padding-right: 5px;
   margin: 0;
 }
 
-#header .header-content .nav-menu .company-name small {
+.first-block .wrapper-content #header .header-content .container .nav-menu .company-name small {
   color: $charcoal-gray-color;
   font-size: 9px;
   line-height: 1;
   margin-top: 5px;
 }
 
-#header .header-content .nav-menu .nav-item {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item {
   @include flex($align-items: center);
 }
 
-#header .header-content .nav-menu .nav-item .menu-list {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
   list-style-type: none;
   display: flex;
   font-size: 16px;
@@ -48,7 +49,7 @@
   margin: 0;
 }
 
-#header .header-content .nav-menu .nav-item .menu-list .menu-link {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link {
   position: relative;
   padding: 0 10px;
   text-decoration: none;
@@ -56,8 +57,8 @@
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 }
 
-#header .header-content .nav-menu .nav-item .menu-list .menu-link::before,
-#header .header-content .nav-menu .nav-item .menu-list .menu-link::after {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::before,
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -67,17 +68,51 @@
   transition: width 0.3s ease;
 }
 
-#header .header-content .nav-menu .nav-item .menu-list .menu-link::before {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::before {
   left: 10px;
 }
 
-#header .header-content .nav-menu .nav-item .menu-list .menu-link::after {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::after {
   right: 10px;
 }
 
-#header .header-content .nav-menu .nav-item .menu-list .menu-link:hover::before,
-#header .header-content .nav-menu .nav-item .menu-list .menu-link:hover::after,
-#header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::before,
-#header .header-content .nav-menu .nav-item .menu-list .menu-link.active-item::after {
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link:hover::before,
+.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link:hover::after {
   width: calc(50% - 12px);
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(3) {
+  top: 16px;
 }
