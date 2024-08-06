@@ -18,6 +18,14 @@ html {
   border: 0;
 }
 
+li, ul {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
 .wrapper-content {
   width: 100%;
   padding: 0;
@@ -45,11 +53,15 @@ html {
   display: flex;
 }
 
+.first-block .top {
+  height: 200px;
+}
+
 /* Header styles */
 .first-block .wrapper-content #header {
   position: fixed;
   width: 100%;
-  padding: 20px 0;
+  padding: 45px 0;
 }
 
 .first-block .wrapper-content #header .header-content {
@@ -75,15 +87,16 @@ html {
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .company-name h2 {
-  color: #ffffff;
   font-size: 24px;
+  color: #ffffff;
   padding-right: 5px;
   margin: 0;
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .company-name small {
-  color: #525255;
   font-size: 9px;
+  font-weight: 530;
+  color: #525255;
   line-height: 1;
   margin-top: 5px;
 }
@@ -94,7 +107,6 @@ html {
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
-  list-style-type: none;
   display: flex;
   font-size: 16px;
   padding: 0;
@@ -104,7 +116,7 @@ html {
 .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link {
   position: relative;
   padding: 0 10px;
-  text-decoration: none;
+  font-size: 21px;
   color: #ffffff;
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 }
@@ -170,49 +182,53 @@ html {
 }
 
 /* Banner */
-.first-block .container .banner .introducing {
-  width: 480px;
-  margin-top: 100px;
+.first-block .wrapper-content .banner {
+  margin: 0;
+  padding: 0 15px;
 }
 
-.first-block .container .banner .introducing small {
-  color: #008ed6;
+.first-block .wrapper-content .banner .container .introducing {
+  width: 480px;
+}
+
+.first-block .wrapper-content .banner .container .introducing small {
   font-size: 14px;
   text-transform: uppercase;
+  color: #008ed6;
 }
 
-.first-block .container .banner .introducing h2 {
-  color: #ffffff;
+.first-block .wrapper-content .banner .container .introducing h2 {
   font-size: 48px;
+  color: #ffffff;
   margin: 20px 0;
 }
 
-.first-block .container .banner .introducing p {
+.first-block .wrapper-content .banner .container .introducing p {
+  font-size: 14px;
   color: #999999;
-  font-size: 18px;
 }
 
-.first-block .container .banner .buttons {
+.first-block .wrapper-content .banner .container .buttons {
   margin-top: 60px;
   display: flex;
 }
 
-.first-block .container .banner .buttons button {
+.first-block .wrapper-content .banner .container .buttons button {
   margin-right: 15px;
 }
 
-.first-block .container .banner .buttons .btn.btn-primary {
+.first-block .wrapper-content .banner .container .buttons .btn.btn-primary {
   background-color: #008ed6;
   font-size: 14px;
 }
 
-.first-block .container .banner .buttons .btn-outline-dark {
-  color: #ffffff;
+.first-block .wrapper-content .banner .container .buttons .btn-outline-dark {
   font-size: 14px;
+  color: #ffffff;
 }
 
-.first-block .container .banner .buttons .btn.btn-primary,
-.first-block .container .banner .buttons .btn-outline-dark {
+.first-block .wrapper-content .banner .container .buttons .btn.btn-primary,
+.first-block .wrapper-content .banner .container .buttons .btn-outline-dark {
   padding: 1rem 2.3rem;
 }
 
@@ -271,19 +287,19 @@ html {
   }
 }
 @media screen and (max-width: 555px) {
-  .first-block .container .banner .buttons {
+  .first-block .wrapper-content .banner .container .buttons {
     margin-top: 30px;
   }
-  .first-block .container .banner .introducing {
+  .first-block .wrapper-content .banner .container .introducing {
     width: 300px;
   }
-  .banner {
+  .first-block .wrapper-content .banner {
     text-align: center;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
   }
-  .first-block .container .banner .buttons .btn.btn-primary, .first-block .container .banner .buttons .btn-outline-dark {
+  .first-block .wrapper-content .banner .container .buttons .btn.btn-primary, .first-block .wrapper-content .banner .container .buttons .btn-outline-dark {
     padding: 15px 5px;
   }
 }

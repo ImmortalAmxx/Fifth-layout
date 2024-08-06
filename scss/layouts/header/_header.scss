@@ -2,7 +2,7 @@
 .first-block .wrapper-content #header {
   position: fixed;
   width: 100%;
-  padding: 20px 0;
+  padding: 45px 0;
 }
 
 .first-block .wrapper-content #header .header-content {
@@ -10,7 +10,6 @@
   margin: 0 auto;
   padding: 0 15px;
   @include flex($align-items: center, $justify-content: space-between);
-
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu {
@@ -24,15 +23,13 @@
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .company-name h2 {
-  color: $white-color;
-  font-size: 24px;
+  @include text-style(24px, $color: $white-color);
   padding-right: 5px;
   margin: 0;
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .company-name small {
-  color: $charcoal-gray-color;
-  font-size: 9px;
+  @include text-style(9px, 530, $color: $charcoal-gray-color);
   line-height: 1;
   margin-top: 5px;
 }
@@ -42,7 +39,6 @@
 }
 
 .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
-  list-style-type: none;
   display: flex;
   font-size: 16px;
   padding: 0;
@@ -52,8 +48,7 @@
 .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link {
   position: relative;
   padding: 0 10px;
-  text-decoration: none;
-  color: $white-color;
+  @include text-style(21px, $color: $white-color);
   transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 }
 

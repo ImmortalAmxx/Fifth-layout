@@ -13,3 +13,21 @@
         justify-content: $justify-content;
     }
 }
+
+@mixin text-style($font-size: null, $font-weight: null, $text-transform: null, $color: null) {
+    @if $font-size {
+        font-size: $font-size;
+    }
+    
+    @if $font-weight {
+        font-weight: $font-weight;
+    }
+    
+    @if $text-transform {
+        text-transform: $text-transform;
+    }
+
+    @if $color {
+        color: $color;
+    }
+}
