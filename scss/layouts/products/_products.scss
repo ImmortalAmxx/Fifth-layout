@@ -15,29 +15,22 @@ main .products .wrapper .container .row p {
   @include text-style(36px, 600, $color: $black-color);
 }
 
-// main .products .wrapper .container .row p::before,
-// main .products .wrapper .container .row p::after {
-//   content: "";
-//   position: absolute;
-//   bottom: -5px;
-//   height: 2px;
-//   width: 0;
-//   background-color: #00BFFF;
-//   transition: width 0.3s ease;
-// }
+main .products .wrapper .container .row .feature-line-container {
+  @include flex($align-items: center, $justify-content: center);
+  width: 100%;
+  margin: 40px 0 80px 0;
+}
 
-// main .products .wrapper .container .row p::before {
-//   left: 10px;
-// }
+main .products .wrapper .container .row .feature-line-container .feature-line {
+  width: 25px;
+  height: 2px;
+  background-color: #00BFFF;
+}
 
-// main .products .wrapper .container .row p::after {
-//   right: 10px;
-// }
-
-// main .products .wrapper .container .row p:hover::before,
-// main .products .wrapper .container .row p:hover::after {
-//   width: calc(50% - 12px);
-// }
+main .products .wrapper .container .row .feature-line-container .feature-line:first-child,
+main .products .wrapper .container .row .feature-line-container .feature-line:last-child {
+  margin: 0 1px;
+}
 
 main .products .wrapper .container .row.items .col-3 .circle {
   @include flex($align-items: center, $justify-content: center);

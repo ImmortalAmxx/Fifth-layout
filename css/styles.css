@@ -242,21 +242,36 @@ main .products .wrapper .container .row {
   width: 100%;
 }
 
-main .products .wrapper .container .row.product-text {
-  margin-bottom: 70px;
-}
-
-main .products .wrapper .container .row.product-text h2 {
+main .products .wrapper .container .row h2 {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #008ed6;
 }
 
-main .products .wrapper .container .row.product-text p {
+main .products .wrapper .container .row p {
   font-size: 36px;
   font-weight: 600;
   color: #1a1a1a;
+}
+
+main .products .wrapper .container .row .feature-line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 40px 0 80px 0;
+}
+
+main .products .wrapper .container .row .feature-line-container .feature-line {
+  width: 25px;
+  height: 2px;
+  background-color: #00BFFF;
+}
+
+main .products .wrapper .container .row .feature-line-container .feature-line:first-child,
+main .products .wrapper .container .row .feature-line-container .feature-line:last-child {
+  margin: 0 1px;
 }
 
 main .products .wrapper .container .row.items .col-3 .circle {
