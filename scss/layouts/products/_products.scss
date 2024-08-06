@@ -1,0 +1,57 @@
+main .products {
+  padding-top: 45px;
+}
+
+main .products .wrapper .container .row {
+  text-align: center;
+  width: 100%;
+}
+
+main .products .wrapper .container .row h2 {
+  @include text-style(14px, bold, uppercase, $light-blue-color);
+}
+
+main .products .wrapper .container .row p {
+  @include text-style(36px, 600, $color: $black-color);
+}
+
+// main .products .wrapper .container .row p::before,
+// main .products .wrapper .container .row p::after {
+//   content: "";
+//   position: absolute;
+//   bottom: -5px;
+//   height: 2px;
+//   width: 0;
+//   background-color: #00BFFF;
+//   transition: width 0.3s ease;
+// }
+
+// main .products .wrapper .container .row p::before {
+//   left: 10px;
+// }
+
+// main .products .wrapper .container .row p::after {
+//   right: 10px;
+// }
+
+// main .products .wrapper .container .row p:hover::before,
+// main .products .wrapper .container .row p:hover::after {
+//   width: calc(50% - 12px);
+// }
+
+main .products .wrapper .container .row.items .col-3 .circle {
+  @include flex($align-items: center, $justify-content: center);
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ededed;
+  border-radius: 50%;
+  background-color: $white-color;
+}
+
+main .products .wrapper .container .row.items .col-3 p {
+  @include text-style(24px, $color: $black-color);
+}
+
+main .products .wrapper .container .row.items .col-3 small {
+  @include text-style(18px, $color: $light-gray-color);
+}
