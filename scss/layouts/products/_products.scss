@@ -45,7 +45,11 @@ main .products .wrapper .container .row.items .col-3 .circle {
   height: 100px;
   border: 2px solid #ededed;
   border-radius: 50%;
-  background-color: $white-color;
+  margin: 0 auto;
+}
+
+main .products .wrapper .container .row.items .col-3 .circle:hover {
+  border: 2px solid $light-blue-color;
 }
 
 main .products .wrapper .container .row.items .col-3 p {

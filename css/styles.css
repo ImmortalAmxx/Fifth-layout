@@ -242,14 +242,18 @@ main .products .wrapper .container .row {
   width: 100%;
 }
 
-main .products .wrapper .container .row h2 {
+main .products .wrapper .container .row.product-text {
+  margin-bottom: 70px;
+}
+
+main .products .wrapper .container .row.product-text h2 {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #008ed6;
 }
 
-main .products .wrapper .container .row p {
+main .products .wrapper .container .row.product-text p {
   font-size: 36px;
   font-weight: 600;
   color: #1a1a1a;
@@ -263,7 +267,11 @@ main .products .wrapper .container .row.items .col-3 .circle {
   height: 100px;
   border: 2px solid #ededed;
   border-radius: 50%;
-  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+main .products .wrapper .container .row.items .col-3 .circle:hover {
+  border: 2px solid #008ed6;
 }
 
 main .products .wrapper .container .row.items .col-3 p {
