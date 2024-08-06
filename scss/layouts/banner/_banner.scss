@@ -4,42 +4,42 @@
   padding: 0 15px;
 }
 
-.first-block .wrapper-content .banner .container .introducing {
-  width: 480px;
+.first-block .wrapper-content .banner .container  .introducing {
+  width: 600px;
 }
 
-.first-block .wrapper-content .banner .container .introducing small {
-  @include text-style(14px, $text-transform: uppercase, $color: $light-blue-color);
+.first-block .wrapper-content .banner .container  .introducing small {
+  @include text-style($font-size-medium, bold, uppercase, $light-blue-color);
 }
 
-.first-block .wrapper-content .banner .container .introducing h2 {
+.first-block .wrapper-content .banner .container  .introducing h2 {
   @include text-style(48px, $color: $white-color);
   margin: 20px 0;
 }
 
-.first-block .wrapper-content .banner .container .introducing p {
-  @include text-style(14px, $color: $light-gray-color);
+.first-block .wrapper-content .banner .container  .introducing p {
+  @include text-style(24px, $color: $light-gray-color);
 }
 
-.first-block .wrapper-content .banner .container .buttons {
+.first-block .wrapper-content .banner .container  .buttons {
   margin-top: 60px;
   display: flex;
 }
 
-.first-block .wrapper-content .banner .container .buttons button {
+.first-block .wrapper-content .banner .container  .buttons button {
   margin-right: 15px;
 }
 
-.first-block .wrapper-content .banner .container .buttons .btn.btn-primary {
+.first-block .wrapper-content .banner .container  .buttons .btn.btn-primary {
   background-color: $light-blue-color;
-  font-size: 14px;
+  font-size: $font-size-medium;
 }
 
-.first-block .wrapper-content .banner .container .buttons .btn-outline-dark {
-  @include text-style(14px, $color: $white-color);
+.first-block .wrapper-content .banner .container  .buttons .btn-outline-dark {
+  @include text-style($font-size-medium, $color: $white-color);
 }
 
-.first-block .wrapper-content .banner .container .buttons .btn.btn-primary, 
-.first-block .wrapper-content .banner .container .buttons .btn-outline-dark {
+.first-block .wrapper-content .banner .container  .buttons .btn.btn-primary, 
+.first-block .wrapper-content .banner .container  .buttons .btn-outline-dark {
   padding: 1.0rem 2.3rem;
 }
