@@ -1,45 +1,45 @@
-/* Banner */
+/* Banner styles */
 .first-block .wrapper-content .banner {
   margin: 0;
   padding: 0 15px;
-}
 
-.first-block .wrapper-content .banner .container  .introducing {
-  width: 600px;
-}
+  .introducing {
+    width: 600px;
 
-.first-block .wrapper-content .banner .container  .introducing small {
-  @include text-style($font-size-medium, bold, uppercase, $light-blue-color);
-}
+    small {
+      @include text-style($font-size-medium, bold, uppercase, $light-blue-color);
+    }
 
-.first-block .wrapper-content .banner .container  .introducing h2 {
-  @include text-style(48px, $color: $white-color);
-  margin: 20px 0;
-}
+    h2 {
+      @include text-style(48px, $color: $white-color);
+      margin: 20px 0;
+    }
 
-.first-block .wrapper-content .banner .container  .introducing p {
-  @include text-style(24px, $color: $light-gray-color);
-}
+    p {
+      @include text-style(24px, $color: $light-gray-color);
+    }
+  }
 
-.first-block .wrapper-content .banner .container  .buttons {
-  margin-top: 60px;
-  display: flex;
-}
+  .container .buttons {
+    margin-top: 60px;
+    display: flex;
 
-.first-block .wrapper-content .banner .container  .buttons button {
-  margin-right: 15px;
-}
+    button {
+      margin-right: 15px;
+    }
 
-.first-block .wrapper-content .banner .container  .buttons .btn.btn-primary {
-  background-color: $light-blue-color;
-  font-size: $font-size-medium;
-}
+    .btn.btn-primary {
+      background-color: $light-blue-color;
+      font-size: $font-size-medium;
+    }
 
-.first-block .wrapper-content .banner .container  .buttons .btn-outline-dark {
-  @include text-style($font-size-medium, $color: $white-color);
-}
+    .btn-outline-dark {
+      @include text-style($font-size-medium, $color: $white-color);
+    }
 
-.first-block .wrapper-content .banner .container  .buttons .btn.btn-primary, 
-.first-block .wrapper-content .banner .container  .buttons .btn-outline-dark {
-  padding: 1.0rem 2.3rem;
+    .btn.btn-primary,
+    .btn-outline-dark {
+      padding: 1.0rem 2.3rem;
+    }
+  }
 }

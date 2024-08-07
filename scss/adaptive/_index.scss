@@ -1,3 +1,4 @@
+/* Adaptive */
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -5,79 +6,102 @@
 }
 
 @media screen and (max-width: 730px) {
-  .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background: #000000;
-    padding: 60px 20px 20px;
+  .first-block .wrapper-content {
+    #header .header-content .container .nav-menu {
+      position: relative;
+
+      .nav-item {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: #000000;
+        padding: 60px 20px 20px;
+        flex-direction: column;
+        transition: right 0.3s ease-in-out;
+
+        &.active {
+          display: flex;
+          right: 0;
+          height: 100vh;
+        }
+
+        .menu-list {
+          flex-direction: column;
+          align-items: flex-end;
+          width: 100%;
+
+          li {
+            margin: 10px 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .menu-link {
+          font-size: 24px;
+          padding: 10px 0;
+        }
+      }
+
+      .burger-menu {
+        display: block;
+        z-index: 1000;
+
+        .burger-icon.active {
+          span {
+            &:nth-child(1) {
+              top: 8px;
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              top: 8px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
+    .banner {
+      text-align: center;
+      @include flex(column, center);
+
+      .container {
+        .buttons {
+          margin-top: 30px;
+          justify-content: center;
+
+          .btn.btn-primary,
+          .btn-outline-dark {
+            padding: 15px 5px;
+          }
+        }
+
+        .introducing {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  main .products .wrapper-content .container .row {
     flex-direction: column;
-    transition: right 0.3s ease-in-out;
-  }
+    align-items: center;
 
-  .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item.active {
-    display: flex;
-    right: 0;
-    height: 100vh;
-  }
+    &.items .col-3 {
+      max-width: 50%;
+      margin-top: 30px;
+    }
 
-  .first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu {
-    display: block;
-    z-index: 1000;
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list li {
-    margin: 10px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu {
-    position: relative;
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon.active span:nth-child(1) {
-    top: 8px;
-    transform: rotate(45deg);
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon.active span:nth-child(3) {
-    top: 8px;
-    transform: rotate(-45deg);
-  }
-
-  .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-link {
-    font-size: 24px;
-    padding: 10px 0;
-  }
-
-  .first-block .wrapper-content .banner {
-    text-align: center;
-    @include flex(column, center);
-  }
-
-  .first-block .wrapper-content .banner .container .buttons {
-    margin-top: 30px;
-    justify-content: center;
-  }
-
-  .first-block .wrapper-content .banner .container .introducing {
-    width: auto;
-  }
-
-  .first-block .wrapper-content .banner .container .buttons .btn.btn-primary, .first-block .wrapper-content .banner .container  .buttons .btn-outline-dark {
-    padding: 15px 5px;
+    .feature-line-container {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -87,8 +111,12 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 490px) {
   .first-block .wrapper-content .banner .container .introducing h2 {
     font-size: 24px;
+  }
+
+  .first-block .wrapper-content .banner .container .introducing p {
+    font-size: 20px;
   }
 }

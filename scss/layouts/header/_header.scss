@@ -1,113 +1,121 @@
-/* Header styles */
 .first-block .wrapper-content #header {
   position: fixed;
   width: 100%;
   padding: 45px 0;
-}
 
-.first-block .wrapper-content #header .header-content {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  @include flex($align-items: center, $justify-content: space-between);
-}
+  &.scrolled {
+    background-color: $black-color;
+    transition: background-color 0.2s ease;
+    z-index: 1;
+  }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu {
-  @include flex($align-items: center, $justify-content: space-between);
-  width: 100%;
-}
+  .header-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include flex($align-items: center, $justify-content: space-between);
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .company-name {
-  @include flex($align-items: center);
-  width: 100px;
-}
+    .container .nav-menu {
+      @include flex($align-items: center, $justify-content: space-between);
+      width: 100%;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .company-name h2 {
-  @include text-style(24px, $color: $white-color);
-  padding-right: 5px;
-  margin: 0;
-}
+      .company-name {
+        @include flex($align-items: center);
+        width: 100px;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .company-name small {
-  @include text-style(9px, 530, $color: $charcoal-gray-color);
-  line-height: 1;
-  margin-top: 5px;
-}
+        h2 {
+          @include text-style(24px, $color: $white-color);
+          padding-right: 5px;
+          margin: 0;
+        }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item {
-  @include flex($align-items: center);
-}
+        small {
+          @include text-style(9px, 530, $color: $charcoal-gray-color);
+          line-height: 1;
+          margin-top: 5px;
+        }
+      }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
-  display: flex;
-  font-size: 16px;
-  padding: 0;
-  margin: 0;
-}
+      .nav-item {
+        @include flex($align-items: center);
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link {
-  position: relative;
-  padding: 0 10px;
-  @include text-style(21px, $color: $white-color);
-  transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
-}
+        .menu-list {
+          display: flex;
+          font-size: 16px;
+          padding: 0;
+          margin: 0;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::before,
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  height: 2px;
-  width: 0;
-  background-color: #00BFFF;
-  transition: width 0.3s ease;
-}
+          .menu-link {
+            position: relative;
+            padding: 0 10px;
+            @include text-style(21px, $color: $white-color);
+            transition: color 0.4s, background-color 0.4s, box-shadow 0.4s, border-radius 0.4s;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::before {
-  left: 10px;
-}
+            &:before,
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              height: 2px;
+              width: 0;
+              background-color: #00BFFF;
+              transition: width 0.3s ease;
+            }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link::after {
-  right: 10px;
-}
+            &:before {
+              left: 10px;
+            }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link:hover::before,
-.first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list .menu-link:hover::after {
-  width: calc(50% - 12px);
-}
+            &:after {
+              right: 10px;
+            }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu {
-  display: none;
-  cursor: pointer;
-}
+            &:hover {
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon {
-  width: 30px;
-  height: 20px;
-  position: relative;
-}
+              &::before,
+              &::after {
+                width: calc(50% - 12px);
+              }
+            }
+          }
+        }
+      }
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span {
-  display: block;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background: $white-color;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
+      .burger-menu {
+        display: none;
+        cursor: pointer;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(1) {
-  top: 0px;
-}
+        .burger-icon {
+          width: 30px;
+          height: 20px;
+          position: relative;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(2) {
-  top: 8px;
-}
+          span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: $white-color;
+            border-radius: 9px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
 
-.first-block .wrapper-content #header .header-content .container .nav-menu .burger-menu .burger-icon span:nth-child(3) {
-  top: 16px;
+            &:nth-child(1) {
+              top: 0px;
+            }
+
+            &:nth-child(2) {
+              top: 8px;
+            }
+
+            &:nth-child(3) {
+              top: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
