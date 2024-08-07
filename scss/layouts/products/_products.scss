@@ -1,5 +1,4 @@
 /* Product styles */
-
 main {
   .products {
     .wrapper-content {
@@ -23,6 +22,12 @@ main {
         @include text-style(36px, 600, $color: $black-color);
       }
 
+      &:hover {
+        .feature-line-container .feature-line {
+          transform: scaleX(1);
+        }
+      }
+
       .feature-line-container {
         @include flex($align-items: center, $justify-content: center);
         width: 100%;
@@ -32,7 +37,17 @@ main {
           width: 25px;
           height: 2px;
           background-color: #00BFFF;
-          margin: 0 1px;
+          margin: 0 2px;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+
+          &:first-child {
+            transform-origin: left center;
+          }
+
+          &:last-child {
+            transform-origin: right center;
+          }
         }
       }
     }

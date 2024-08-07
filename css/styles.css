@@ -235,6 +235,9 @@ main .products .wrapper-content .container .row p {
   font-weight: 600;
   color: #1a1a1a;
 }
+main .products .wrapper-content .container .row:hover .feature-line-container .feature-line {
+  transform: scaleX(1);
+}
 main .products .wrapper-content .container .row .feature-line-container {
   display: flex;
   align-items: center;
@@ -246,7 +249,15 @@ main .products .wrapper-content .container .row .feature-line-container .feature
   width: 25px;
   height: 2px;
   background-color: #00BFFF;
-  margin: 0 1px;
+  margin: 0 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+main .products .wrapper-content .container .row .feature-line-container .feature-line:first-child {
+  transform-origin: left center;
+}
+main .products .wrapper-content .container .row .feature-line-container .feature-line:last-child {
+  transform-origin: right center;
 }
 main .products .wrapper-content .container .row.items .col-3 p {
   font-size: 24px;
