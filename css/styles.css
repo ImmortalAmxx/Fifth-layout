@@ -296,15 +296,16 @@ main .products .wrapper-content .container .row.items .col-3 .circle:hover {
     position: fixed;
     top: 0;
     right: -100%;
-    background: #000000;
-    padding: 60px 20px 20px;
+    background: #1a1a1a;
+    padding: 80px 20px 20px;
     flex-direction: column;
     transition: right 0.3s ease-in-out;
   }
   .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item.active {
     display: flex;
     right: 0;
-    height: 100vh;
+    width: 100%;
+    z-index: -1;
   }
   .first-block .wrapper-content #header .header-content .container .nav-menu .nav-item .menu-list {
     flex-direction: column;
