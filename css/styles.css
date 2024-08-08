@@ -281,6 +281,53 @@ main .products .wrapper-content .container .row.items .col-3 .circle:hover {
   border: 2px solid #008ed6;
 }
 
+main .details .wrapper-content .container.details-content {
+  padding-top: 65px !important;
+}
+main .details .wrapper-content .container .row .col-6 > p {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #008ed6;
+}
+main .details .wrapper-content .container .row .col-6 .line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0;
+}
+main .details .wrapper-content .container .row .col-6 .line .line-feature {
+  width: 25px;
+  height: 2px;
+  background-color: #00BFFF;
+}
+main .details .wrapper-content .container .row .col-6 .line .line-feature:first-child, main .details .wrapper-content .container .row .col-6 .line .line-feature:last-child {
+  margin: 0 2px;
+}
+main .details .wrapper-content .container .row .col-6 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+main .details .wrapper-content .container .row .col-6 small {
+  font-size: 18px;
+  color: #999999;
+}
+main .details .wrapper-content .container .row .col-6 .details-item {
+  padding-top: 40px;
+}
+main .details .wrapper-content .container .row .col-6 .details-item .details-item-info {
+  font-size: 12px;
+  color: #1a1a1a;
+  margin: 5px 0 !important;
+}
+main .details .wrapper-content .container .row .col-6 .details-item .details-item-info img {
+  height: 16px !important;
+  width: 16px;
+  margin: 0 !important;
+  margin-right: 10px !important;
+}
+
 /* Adaptive */
 @media screen and (max-width: 1200px) {
   .container {
